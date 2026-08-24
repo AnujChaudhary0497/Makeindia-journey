@@ -1,0 +1,992 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-bar {
+  width: 100%;
+  height: 50px;
+
+  background-color: #000;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4%;
+}
+
+/* Contact Information */
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.contact-info span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-info i {
+  margin-right: 8px;
+}
+
+/* Social Icons */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-links a {
+  width: 32px;
+  height: 32px;
+
+  background-color: #a90000;
+  color: #fff;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #700000;
+}
+
+.social-links i {
+  font-size: 15px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 100%;
+  height: 90px;
+
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4%;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo img {
+  width: 200px;
+  display: block;
+}
+
+/* ================= NAVIGATION ================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #172a32;
+
+  font-size: 12px;
+  font-weight: 520;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a90000;
+}
+
+.nav-links i {
+  color: #a90000;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+/* ================= BOOK BUTTON ================= */
+
+.book-btn {
+  text-decoration: none;
+
+  background-color: #a90000;
+  color: #fff;
+
+  padding: 17px 32px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #750000;
+}
+
+/* ================= ABOUT HERO ================= */
+
+.about-hero {
+  height: 350px;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("assets/about.png");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.about-hero-content h1 {
+  color: #fff;
+
+  font-size: 52px;
+
+  margin-bottom: 12px;
+}
+
+.about-hero-content p {
+  color: #fff;
+
+  font-size: 16px;
+}
+.about-hero-content p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-hero-content p a:hover {
+  color: #a90000;
+}
+
+.about-hero-content span {
+  color: #a90000;
+
+  margin: 0 8px;
+}
+/* ================= ABOUT CONTENT ================= */
+
+.about-content {
+  width: 92%;
+  max-width: 1400px;
+
+  margin: 70px auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+/* ================= IMAGES ================= */
+
+.about-images {
+  position: relative;
+
+  min-height: 500px;
+}
+
+/* Top Video */
+
+.about-video {
+  position: absolute;
+
+  top: 0;
+  left: 70px;
+
+  width: 78%;
+  height: 220px;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+}
+
+.about-video img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* Play Button */
+
+.play-btn {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 60px;
+  height: 60px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  color: #fff;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottom Images */
+
+.about-image {
+  position: absolute;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* Bottom Left */
+
+.image-one {
+  width: 48%;
+  height: 345px;
+
+  left: 0;
+  bottom: 0;
+}
+
+/* Bottom Right */
+
+.image-two {
+  width: 48%;
+  height: 345px;
+
+  right: 0;
+  bottom: 0;
+}
+
+/* ================= RIGHT CONTENT ================= */
+
+.about-info h2 {
+  color: #293238;
+
+  font-size: 44px;
+
+  line-height: 1.15;
+
+  margin-bottom: 30px;
+}
+
+/* ================= STATS ================= */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.stat {
+  text-align: center;
+
+  padding: 20px 10px;
+}
+
+.stat.active {
+  background: #fff;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stat strong {
+  display: block;
+
+  color: #172b38;
+
+  font-size: 36px;
+
+  margin-bottom: 8px;
+}
+
+.stat.active strong {
+  color: #a90000;
+}
+
+.stat span {
+  display: block;
+
+  color: #222;
+
+  font-size: 15px;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.about-info > p {
+  color: #777;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+/* ================= VIDEO POPUP ================= */
+
+.video-modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  z-index: 99999;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal.active {
+  display: flex;
+}
+
+/* Video Box */
+
+.video-box {
+  position: relative;
+
+  width: 80%;
+  max-width: 900px;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000;
+}
+
+/* YouTube */
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  display: block;
+}
+
+/* Close Button */
+
+.close-video {
+  position: absolute;
+
+  top: -45px;
+  right: -45px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #a90000;
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100000;
+}
+/* ================= TESTIMONIALS ================= */
+
+.testimonials {
+  position: relative;
+
+  width: 100%;
+
+  padding: 80px 4%;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("assets/testimonial-bg.png");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+/* Header */
+
+.testimonial-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+/* Heading */
+
+.testimonial-header h2 {
+  color: #fff;
+
+  font-size: 42px;
+
+  margin-bottom: 15px;
+}
+
+/* Description */
+
+.testimonial-header p {
+  max-width: 850px;
+
+  color: #fff;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+/* ================= ARROWS ================= */
+
+.testimonial-arrows {
+  display: flex;
+
+  gap: 20px;
+}
+
+.testimonial-arrows button {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: #a90000;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.testimonial-arrows button:hover {
+  background-color: #750000;
+}
+
+/* ================= CARDS ================= */
+
+.testimonial-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+/* Individual Card */
+
+.testimonial-card {
+  background-color: #001a33;
+
+  color: #fff;
+
+  padding: 35px;
+
+  border-radius: 8px;
+
+  min-height: 270px;
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
+
+  cursor: pointer;
+}
+
+/* ================= HOVER ================= */
+
+.testimonial-card:hover {
+  background-color: #fff;
+
+  color: #222;
+
+  transform: translateY(-5px);
+}
+
+/* ================= TOP ================= */
+
+.testimonial-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  position: relative;
+}
+
+/* Customer Image */
+
+.testimonial-top img {
+  width: 75px;
+  height: 75px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+/* Customer Name */
+
+.testimonial-top h3 {
+  font-size: 24px;
+
+  margin-bottom: 8px;
+}
+
+/* ================= STARS ================= */
+
+.stars {
+  display: flex;
+
+  gap: 5px;
+}
+
+.stars i {
+  color: #b00000;
+
+  font-size: 16px;
+}
+
+/* ================= QUOTE ================= */
+
+.quote-icon {
+  margin-left: auto;
+
+  align-self: center;
+
+  font-size: 38px;
+
+  color: #fff;
+
+  transition: 0.4s ease;
+}
+
+/* Quote changes on hover */
+
+.testimonial-card:hover .quote-icon {
+  color: #001a33;
+}
+
+/* ================= TESTIMONIAL TEXT ================= */
+
+.testimonial-text {
+  margin-top: 30px;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: inherit;
+}
+
+/* ================= EXPERT AGENTS ================= */
+
+.expert-agents {
+  width: 100%;
+
+  padding: 80px 3% 90px;
+
+  background: #ffffff;
+}
+
+/* ================= HEADER ================= */
+
+.agents-header {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.agents-header > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #a90000;
+
+  font-family: cursive;
+
+  font-size: 20px;
+
+  font-style: italic;
+}
+
+.agents-header h2 {
+  margin: 0 0 15px;
+
+  color: #293238;
+
+  font-size: 44px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.agents-header p {
+  width: 90%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  color: #777;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+/* ================= AGENTS GRID ================= */
+
+.agents-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+/* ================= AGENT CARD ================= */
+
+.agent-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= IMAGE ================= */
+
+.agent-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 310px;
+
+  overflow: hidden;
+}
+
+.agent-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ================= CONTACT BUTTON ================= */
+
+.agent-contact {
+  position: absolute;
+
+  left: 15px;
+  bottom: 15px;
+
+  padding: 9px 22px;
+
+  background: #a90000;
+
+  color: #ffffff;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.agent-contact:hover {
+  background: #750000;
+}
+
+/* ================= AGENT INFO ================= */
+
+.agent-info {
+  height: 98px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+}
+
+.agent-info h3 {
+  margin: 0 0 6px;
+
+  color: #293238;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.agent-info p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 15px;
+}
+
+.footer {
+  background-color: #050505;
+
+  color: #fff;
+
+  padding-top: 60px;
+}
+
+/* Main Footer */
+
+.footer-container {
+  width: 94%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1.3fr;
+
+  gap: 60px;
+
+  padding-bottom: 55px;
+}
+
+/* ================= ABOUT ================= */
+
+.footer-about img {
+  width: 185px;
+
+  margin-bottom: 25px;
+}
+
+.footer-about p {
+  max-width: 390px;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+/* ================= SOCIAL ================= */
+
+.footer-social {
+  display: flex;
+
+  gap: 18px;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #a90000;
+
+  color: #fff;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #fff;
+
+  color: #a90000;
+}
+
+/* ================= HEADINGS ================= */
+
+.footer h3 {
+  font-size: 21px;
+
+  margin-bottom: 25px;
+}
+
+/* ================= LINKS ================= */
+
+.footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.footer-links a {
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #a90000;
+
+  padding-left: 5px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.contact-item i {
+  color: #fff;
+
+  font-size: 20px;
+
+  margin-top: 3px;
+
+  min-width: 20px;
+}
+
+.contact-item p {
+  color: #fff;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+/* ================= COPYRIGHT ================= */
+
+.copyright {
+  background-color: #a90000;
+
+  text-align: center;
+
+  padding: 18px 10px;
+}
+
+.copyright p {
+  color: #fff;
+  font-size: 14px;
+
+  margin: 0;
+}
