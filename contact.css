@@ -128,7 +128,7 @@ body {
   margin-left: 4px;
 }
 
-/* ================= BOOK BUTTON ================= */
+/* ------------- BOOK BUTTON ---------- */
 
 .book-btn {
   text-decoration: none;
@@ -148,7 +148,7 @@ body {
   background-color: #750000;
 }
 
-/* ================= ABOUT HERO ================= */
+/* -------------- ABOUT HERO ------------- */
 
 .about-hero {
   height: 350px;
@@ -193,4 +193,457 @@ body {
   color: #a90000;
 
   margin: 0 8px;
+}
+
+/* ----------CONTACT SECTION--------- */
+
+.contact-section {
+  width: 100%;
+  padding: 70px 0 80px;
+  background: #ffffff;
+}
+
+/* -------------- CONTACT TOP ------------------ */
+
+.contact-container {
+  width: 78%;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 0;
+}
+
+/* ------------------- LEFT IMAGE -------------- */
+
+.contact-image {
+  width: 100%;
+  height: 540px;
+
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ------------- RIGHT INFO BOX ------------ */
+
+.contact-info-box {
+  width: 100%;
+  min-height: 490px;
+
+  padding: 40px 45px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+
+  border-radius: 5px;
+}
+
+/* -------------- HEADING --------- */
+
+.contact-info-box h2 {
+  margin: 0;
+
+  color: #263842;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.heading-line {
+  width: 70px;
+  height: 4px;
+
+  margin-top: 8px;
+  margin-bottom: 25px;
+
+  background: linear-gradient(
+    to right,
+    #a90000 0%,
+    #a90000 65%,
+    #e8e8e8 65%,
+    #e8e8e8 100%
+  );
+}
+
+/* ------------------ CONTACT CARDS ----------------- */
+
+.contact-card {
+  width: 100%;
+
+  margin-bottom: 26px;
+  padding: 18px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 5px 30px 5px 5px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card h3 {
+  margin: 0 0 6px;
+
+  color: #172a32;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contact-card p {
+  margin: 0 0 6px;
+
+  color: #293845;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------Contact Form------------ */
+
+.contact-form {
+  width: 86%;
+  max-width: 1400px;
+
+  margin: 80px auto 0;
+
+  padding: 0 35px 40px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* -------------- FORM HEADING ------------ */
+
+.contact-form h2 {
+  margin: 0 0 10px;
+
+  color: #263842;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.form-description {
+  margin: 0 0 30px;
+
+  color: #777777;
+
+  font-size: 15px;
+}
+
+/* --------------- FORM ROW ------------ */
+
+.form-row {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+}
+
+/* -------------- FORM GROUP ------------ */
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #172a32;
+
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* ---------------- INPUT -------------- */
+
+.form-group input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 18px;
+
+  border: 1px solid #cfe5df;
+
+  border-radius: 30px;
+
+  outline: none;
+
+  background: #f8fcfa;
+
+  color: #333333;
+
+  font-size: 14px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input:focus {
+  border-color: #a90000;
+}
+
+/* ---------------- MESSAGE ------------- */
+
+.message-group {
+  margin-top: 26px;
+}
+
+.form-group textarea {
+  width: 100%;
+  height: 105px;
+
+  padding: 18px;
+
+  resize: vertical;
+
+  border: 1px solid #cfe5df;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #f8fcfa;
+
+  color: #333333;
+
+  font-size: 14px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group textarea:focus {
+  border-color: #a90000;
+}
+
+/* ----------- BUTTON -------------- */
+
+.send-message {
+  margin-top: 25px;
+
+  padding: 12px 35px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #a90000;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.send-message:hover {
+  background: #750000;
+}
+/* ================= MAP ================= */
+
+.map-section {
+  width: 100%;
+  height: 360px;
+  margin-top: 20px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* -----FOOTER------- */
+
+.footer {
+  background-color: #050505;
+
+  color: #fff;
+  margin-top: 20px;
+  padding-top: 60px;
+}
+
+/* Main Footer */
+
+.footer-container {
+  width: 94%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1.3fr;
+
+  gap: 60px;
+
+  padding-bottom: 55px;
+}
+
+/* ================= ABOUT ================= */
+
+.footer-about img {
+  width: 185px;
+
+  margin-bottom: 25px;
+}
+
+.footer-about p {
+  max-width: 390px;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+/* ================= SOCIAL ================= */
+
+.footer-social {
+  display: flex;
+
+  gap: 18px;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #a90000;
+
+  color: #fff;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #fff;
+
+  color: #a90000;
+}
+
+/* ================= HEADINGS ================= */
+
+.footer h3 {
+  font-size: 21px;
+
+  margin-bottom: 25px;
+}
+
+/* ================= LINKS ================= */
+
+.footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.footer-links a {
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #a90000;
+
+  padding-left: 5px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.contact-item i {
+  color: #fff;
+
+  font-size: 20px;
+
+  margin-top: 3px;
+
+  min-width: 20px;
+}
+
+.contact-item p {
+  color: #fff;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+/* ================= COPYRIGHT ================= */
+
+.copyright {
+  background-color: #a90000;
+
+  text-align: center;
+
+  padding: 18px 10px;
+}
+
+.copyright p {
+  color: #fff;
+
+  font-size: 14px;
+
+  margin: 0;
 }
