@@ -66,6 +66,67 @@ body {
 
   transition: 0.3s ease;
 }
+/* ================= INTERNATIONAL DROPDOWN ================= */
+
+.international-menu {
+  position: relative;
+}
+
+.international-menu > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Dropdown Box */
+.international-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 265px;
+
+  background-color: #fff;
+
+  display: none;
+
+  flex-direction: column;
+
+  padding: 8px 0;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+  z-index: 9999;
+}
+
+/* Dropdown Links */
+.international-dropdown a {
+  display: block;
+
+  width: 100%;
+
+  padding: 14px 18px;
+
+  color: #172a32;
+
+  text-decoration: none;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+/* Hover on dropdown item */
+.international-dropdown a:hover {
+  color: #a90000;
+  background-color: #f8f8f8;
+}
+
+/* Show dropdown when hovering International Tours */
+.international-menu:hover .international-dropdown {
+  display: flex;
+}
 
 .social-links a:hover {
   background-color: #700000;
