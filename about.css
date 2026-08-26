@@ -113,7 +113,7 @@ body {
   color: #172a32;
 
   font-size: 12px;
-  font-weight: 520;
+  font-weight: 550;
 
   transition: 0.3s ease;
 }
@@ -164,7 +164,7 @@ body {
   text-decoration: none;
 
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
 
   white-space: nowrap;
 }
@@ -178,11 +178,11 @@ body {
 
 /* --------for rotation plus icon-------- */
 .international-menu > a i {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .international-menu:hover > a i {
-    transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 /* Show Dropdown */

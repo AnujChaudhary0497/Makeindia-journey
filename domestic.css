@@ -125,7 +125,7 @@ body {
 }
 
 .international-menu:hover > a i {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 /* ------Show dropdown when hovering International Tours---------- */
 .international-menu:hover .international-dropdown {
@@ -182,7 +182,7 @@ body {
   color: #172a32;
 
   font-size: 12px;
-  font-weight: 520;
+  font-weight: 550;
 
   transition: 0.3s ease;
 }
