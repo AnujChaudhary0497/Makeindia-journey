@@ -66,7 +66,7 @@ body {
 
   transition: 0.3s ease;
 }
-/* ================= INTERNATIONAL DROPDOWN ================= */
+/* ------------INTERNATIONAL DROPDOWN------------- */
 
 .international-menu {
   position: relative;
@@ -83,20 +83,15 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-
   width: 265px;
-
   background-color: #fff;
-
-  display: none;
 
   flex-direction: column;
 
-  padding: 8px 0;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-
-  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
 }
 
 /* Dropdown Links */
@@ -105,13 +100,13 @@ body {
 
   width: 100%;
 
-  padding: 14px 18px;
+  padding: 10px 14px;
 
   color: #172a32;
 
   text-decoration: none;
 
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 400;
 
   white-space: nowrap;
@@ -123,9 +118,20 @@ body {
   background-color: #f8f8f8;
 }
 
-/* Show dropdown when hovering International Tours */
+/* --------for rotation plus icon-------- */
+.international-menu > a i {
+    transition: transform 0.3s ease;
+}
+
+.international-menu:hover > a i {
+    transform: rotate(90deg);
+}
+
+/* ------Show dropdown when hovering International Tours---------- */
 .international-menu:hover .international-dropdown {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .social-links a:hover {
@@ -136,7 +142,7 @@ body {
   font-size: 15px;
 }
 
-/* ================= NAVBAR ================= */
+/*---------------NAVBAR---------------*/
 
 .navbar {
   width: 100%;
