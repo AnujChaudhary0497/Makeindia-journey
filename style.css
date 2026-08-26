@@ -120,11 +120,11 @@ body {
 
 /* --------for rotation plus icon-------- */
 .international-menu > a i {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .international-menu:hover > a i {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* ------Show dropdown when hovering International Tours---------- */
@@ -219,6 +219,8 @@ body {
 /* ================= HERO ================= */
 
 .hero {
+  position: relative;
+
   width: 100%;
   height: 650px;
 
@@ -234,10 +236,8 @@ body {
   justify-content: center;
 
   text-align: center;
-
   color: #fff;
 }
-
 /* Hero Content */
 
 .hero-content {
@@ -309,7 +309,48 @@ body {
   background-color: #750000;
 }
 
-/* ================= DESTINATIONS ================= */
+.hero-dots {
+    position: absolute;
+
+    left: 50px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    z-index: 10;
+}
+.hero-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  border: 3px solid #fff;
+
+  background: transparent;
+
+  display: block;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hero-dot.active {
+  width: 14px;
+  height: 14px;
+
+  background-color: #a90000;
+  border-color: #a90000;
+}
+
+/* --------------DESTINATIONS--------------- */
 
 .destinations {
   padding: 80px 8%;
@@ -383,7 +424,7 @@ body {
   background-color: #750000;
 }
 
-/* ================= DESTINATION GRID ================= */
+/* ---------------- DESTINATION GRID ----------------- */
 
 .destination-grid {
   display: grid;
