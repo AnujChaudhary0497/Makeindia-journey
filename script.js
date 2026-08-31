@@ -63,7 +63,7 @@ function changeHero(index) {
 
   /* Change Background Image */
 
-hero.style.backgroundImage = `
+  hero.style.backgroundImage = `
     linear-gradient(
         rgba(0, 0, 0, 0.65),
         rgba(0, 0, 0, 0.65)
@@ -105,42 +105,67 @@ heroDots.forEach((dot) => {
     changeHero(index);
   });
 });
-// ----------------menu button------------ 
+// ================= MENU BUTTON =================
+
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.querySelector(".nav-links");
-const menuIcon = menuBtn.querySelector("i");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn && navLinks) {
 
-    const isOpen = navLinks.classList.toggle("mobile-active");
+    const menuIcon = menuBtn.querySelector("i");
 
-    menuBtn.classList.toggle("menu-open", isOpen);
+    menuBtn.addEventListener("click", () => {
 
-    if (isOpen) {
-        menuIcon.classList.remove("fa-bars");
-        menuIcon.classList.add("fa-xmark");
-    } else {
-        menuIcon.classList.remove("fa-xmark");
-        menuIcon.classList.add("fa-bars");
-    }
+        const isOpen = navLinks.classList.toggle("mobile-active");
 
+        menuBtn.classList.toggle("menu-open", isOpen);
+
+        if (isOpen) {
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-xmark");
+        } else {
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+        }
+
+    });
+
+    // Outside click se menu close + icon wapas bars
+    document.addEventListener("click", (event) => {
+
+        if (
+            navLinks.classList.contains("mobile-active") &&
+            !navLinks.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+
+            navLinks.classList.remove("mobile-active");
+            menuBtn.classList.remove("menu-open");
+
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+        }
+
+    });
+
+}
+
+// ================= FAQ ACCORDION =================
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+
+  question.addEventListener("click", () => {
+    // Close other questions
+    faqItems.forEach((otherItem) => {
+      if (otherItem !== item) {
+        otherItem.classList.remove("active");
+      }
+    });
+
+    // Open / close clicked question
+    item.classList.toggle("active");
+  });
 });
-
-// ----------Outer click------------
-document.addEventListener("click", (event) => {
-
-    if (
-        navLinks.classList.contains("mobile-active") &&
-        !navLinks.contains(event.target) &&
-        !menuBtn.contains(event.target)
-    ) {
-
-        navLinks.classList.remove("mobile-active");
-        menuBtn.classList.remove("menu-open");
-
-        menuIcon.classList.remove("fa-xmark");
-        menuIcon.classList.add("fa-bars");
-    }
-
-});
-
