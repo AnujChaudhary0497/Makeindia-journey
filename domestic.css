@@ -121,11 +121,11 @@ body {
 
 /* --------for rotation plus icon-------- */
 .international-menu > a i {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .international-menu:hover > a i {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 /* ------Show dropdown when hovering International Tours---------- */
 .international-menu:hover .international-dropdown {
@@ -215,6 +215,10 @@ body {
 
 .book-btn:hover {
   background-color: #750000;
+}
+
+.menu-btn {
+  display: none;
 }
 
 /*  ABOUT HERO  */
@@ -345,7 +349,7 @@ body {
   color: #a90000;
 }
 
-/* ================= HEADINGS ================= */
+/* ------------- HEADINGS -------------- */
 
 .footer h3 {
   font-size: 21px;
@@ -353,7 +357,7 @@ body {
   margin-bottom: 25px;
 }
 
-/* ================= LINKS ================= */
+/* ---------------- LINKS -------------- */
 
 .footer-links {
   display: flex;
@@ -379,7 +383,7 @@ body {
   padding-left: 5px;
 }
 
-/* ================= CONTACT ================= */
+/* ----------------- CONTACT ----------------- */
 
 .contact-item {
   display: flex;
@@ -675,4 +679,558 @@ body {
   color: #a90000;
 
   font-size: 16px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* ---------- TOP BAR ---------- */
+
+  .contact-info {
+    display: none;
+  }
+
+  .social-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar {
+    height: 75px;
+    padding: 0 3%;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .nav-links i {
+    font-size: 11px;
+    margin-left: 2px;
+  }
+
+  .book-btn {
+    padding: 11px 16px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  /* ---------- ABOUT HERO TABLET ---------- */
+
+  .about-hero {
+    height: 350px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 48px;
+  }
+
+  .about-hero-content p {
+    font-size: 15px;
+  }
+  /* ---------- DOMESTIC TOURS TABLET ---------- */
+
+  .domestic-tours {
+    padding: 60px 5%;
+  }
+
+  .domestic-header {
+    gap: 30px;
+    margin-bottom: 35px;
+  }
+
+  .domestic-heading {
+    max-width: 700px;
+  }
+
+  .domestic-heading > p {
+    font-size: 17px;
+  }
+
+  .domestic-heading h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .domestic-heading span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .domestic-header .view-tour-btn {
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+
+  .tour-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .tour-card {
+    width: 100%;
+  }
+
+  .tour-image {
+    height: 220px;
+  }
+
+  .tour-duration {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .tour-content {
+    padding: 17px;
+  }
+
+  .tour-content h3 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .tour-location {
+    font-size: 13px;
+  }
+
+  .tour-bottom {
+    gap: 10px;
+  }
+
+  .book-now {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .tour-price span {
+    font-size: 11px;
+  }
+
+  .tour-price strong {
+    font-size: 15px;
+  }
+  /* ---------- FOOTER ---------- */
+
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer-container {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding-bottom: 45px;
+  }
+
+  .footer-about img {
+    width: 160px;
+    margin-bottom: 20px;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer h3 {
+    font-size: 19px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .contact-item {
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-item i {
+    font-size: 18px;
+  }
+
+  .contact-item p {
+    font-size: 14px;
+  }
+
+  .copyright {
+    padding: 15px 10px;
+  }
+
+  .copyright p {
+    font-size: 12px;
+  }
+}
+
+/* -------MOBILE  0px - 768px--------- */
+
+@media (max-width: 768px) {
+  /* ---------- TOP BAR ---------- */
+
+  .top-bar {
+    display: none;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar {
+    height: 65px;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 110px;
+    height: auto;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .book-btn {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+
+    width: 48px;
+    height: 48px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+    color: #a90000;
+
+    font-size: 30px;
+
+    cursor: pointer;
+  }
+
+  /* ---------- ABOUT HERO MOBILE ---------- */
+
+  .about-hero {
+    height: 280px;
+  }
+
+  .about-hero-content {
+    width: 90%;
+  }
+
+  .about-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .about-hero-content p {
+    font-size: 13px;
+  }
+
+  .about-hero-content p span {
+    margin: 0 5px;
+  }
+  /* ---------- DOMESTIC TOURS MOBILE ---------- */
+
+  .domestic-tours {
+    padding: 50px 5%;
+  }
+
+  .domestic-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 22px;
+    margin-bottom: 30px;
+  }
+
+  .domestic-heading {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .domestic-heading > p {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .domestic-heading h2 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .domestic-heading span {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .domestic-header .view-tour-btn {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .tour-container {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .tour-card {
+    width: 100%;
+  }
+
+  .tour-image {
+    height: 220px;
+  }
+
+  .tour-duration {
+    top: 12px;
+    left: 12px;
+
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .tour-content {
+    padding: 16px;
+  }
+
+  .tour-content h3 {
+    font-size: 18px;
+    line-height: 1.35;
+    min-height: auto;
+    margin-bottom: 10px;
+  }
+
+  .tour-location {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .tour-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .book-now {
+    padding: 8px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .tour-price {
+    text-align: right;
+  }
+
+  .tour-price span {
+    font-size: 11px;
+  }
+
+  .tour-price strong {
+    font-size: 15px;
+  }
+  /* ---------- FOOTER ---------- */
+
+  .footer {
+    padding-top: 45px;
+  }
+
+  /* ---------- FOOTER LINKS MOBILE ---------- */
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+  }
+
+  /* First column - About */
+  .footer-about {
+    grid-column: 1 / -1;
+  }
+
+  /* Useful Links */
+  .footer-links {
+    width: 100%;
+  }
+
+  /* Contact Us full width */
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-about img {
+    width: 155px;
+    margin-bottom: 18px;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-social {
+    gap: 12px;
+  }
+
+  .footer-social a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer h3 {
+    font-size: 19px;
+    margin-bottom: 18px;
+  }
+
+  .footer-links {
+    gap: 11px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .contact-item {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .contact-item i {
+    font-size: 17px;
+    min-width: 18px;
+  }
+
+  .contact-item p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .copyright {
+    padding: 14px 10px;
+  }
+
+  .copyright p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  /* MOBILE MENU */
+  .navbar {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 80%;
+    max-width: 380px;
+    height: 100vh;
+
+    background: #fff;
+
+    padding: 120px 0 30px;
+
+    gap: 0;
+
+    z-index: 9999;
+
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+
+    overflow-y: auto;
+  }
+
+  .nav-links.mobile-active {
+    transform: translateX(0);
+  }
+
+  .nav-links > a,
+  .nav-links .international-menu > a {
+    width: 100%;
+    padding: 17px 22px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eee;
+
+    color: #08233b;
+  }
+
+  .international-menu {
+    width: 100%;
+  }
+
+  .international-dropdown {
+    width: 100%;
+  }
+  .mobile-menu-logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 150px;
+  }
+
+  .mobile-menu-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .international-menu > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .international-menu > a i {
+    color: #b00000 !important;
+    font-size: 14px;
+    margin-left: auto;
+  }
+  .menu-btn i {
+    transition: transform 0.3s ease;
+  }
+
+  .menu-btn.menu-open i {
+    transform: rotate(90deg);
+  }
 }

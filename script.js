@@ -4,25 +4,27 @@ const closeVideo = document.querySelector("#closeVideo");
 const youtubeVideo = document.querySelector("#youtubeVideo");
 
 if (playVideo && videoModal && closeVideo && youtubeVideo) {
+  playVideo.addEventListener("click", () => {
+    youtubeVideo.src = "https://www.youtube.com/embed/52t241OQ7Ec?autoplay=1";
+    videoModal.classList.add("active");
+  });
 
-    playVideo.addEventListener("click", () => {
-        youtubeVideo.src =
-            "https://www.youtube.com/embed/52t241OQ7Ec?autoplay=1";
-        videoModal.classList.add("active");
-    });
-
-    closeVideo.addEventListener("click", () => {
-        videoModal.classList.remove("active");
-        youtubeVideo.src = "";
-    });
-
+  closeVideo.addEventListener("click", () => {
+    videoModal.classList.remove("active");
+    youtubeVideo.src = "";
+  });
 }
 
+/* ================= HERO CAROUSEL ================= */
+
 const hero = document.querySelector(".hero");
+const heroContent = document.querySelector(".hero-content");
 const heroSubtitle = document.querySelector(".hero-subtitle");
 const heroTitle = document.querySelector(".hero-content h1");
 const heroDescription = document.querySelector(".hero-description");
 const heroDots = document.querySelectorAll(".hero-dot");
+
+/* ================= SLIDES ================= */
 
 const heroSlides = [
   {
@@ -54,20 +56,22 @@ const heroSlides = [
   },
 ];
 
+/* ================= CHANGE SLIDE ================= */
+
 function changeHero(index) {
   const slide = heroSlides[index];
 
-  /* Change background image */
+  /* Change Background Image */
 
-  hero.style.backgroundImage = `
-        linear-gradient(
-            rgba(0, 0, 0, 0.40),
-            rgba(0, 0, 0, 0.40)
-        ),
-        url("${slide.image}")
-    `;
+hero.style.backgroundImage = `
+    linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+    ),
+    url("${slide.image}")
+`;
 
-  /* Change text */
+  /* Change Text */
 
   heroSubtitle.textContent = slide.subtitle;
 
@@ -75,16 +79,24 @@ function changeHero(index) {
 
   heroDescription.textContent = slide.description;
 
-  /* Change active dot */
+  /* ================= ACTIVE DOT ================= */
 
   heroDots.forEach((dot) => {
     dot.classList.remove("active");
   });
 
   heroDots[index].classList.add("active");
+
+  /* ================= TEXT ANIMATION ================= */
+
+  heroContent.classList.remove("hero-animate");
+
+  void heroContent.offsetWidth;
+
+  heroContent.classList.add("hero-animate");
 }
 
-/* Dot click */
+/* ================= DOT CLICK ================= */
 
 heroDots.forEach((dot) => {
   dot.addEventListener("click", function () {
@@ -93,3 +105,42 @@ heroDots.forEach((dot) => {
     changeHero(index);
   });
 });
+// ----------------menu button------------ 
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.querySelector(".nav-links");
+const menuIcon = menuBtn.querySelector("i");
+
+menuBtn.addEventListener("click", () => {
+
+    const isOpen = navLinks.classList.toggle("mobile-active");
+
+    menuBtn.classList.toggle("menu-open", isOpen);
+
+    if (isOpen) {
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+    } else {
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+    }
+
+});
+
+// ----------Outer click------------
+document.addEventListener("click", (event) => {
+
+    if (
+        navLinks.classList.contains("mobile-active") &&
+        !navLinks.contains(event.target) &&
+        !menuBtn.contains(event.target)
+    ) {
+
+        navLinks.classList.remove("mobile-active");
+        menuBtn.classList.remove("menu-open");
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+    }
+
+});
+
