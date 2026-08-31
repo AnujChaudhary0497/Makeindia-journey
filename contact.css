@@ -215,6 +215,9 @@ body {
 .menu-btn {
   display: none;
 }
+.mobile-menu-logo {
+  display: none;
+}
 
 /* -------------- ABOUT HERO ------------- */
 
@@ -1205,7 +1208,7 @@ body {
     font-size: 11px;
     line-height: 1.5;
   }
-   /* MOBILE MENU */
+  /* MOBILE MENU */
   .navbar {
     position: relative;
     z-index: 1000;
@@ -1262,35 +1265,36 @@ body {
   .international-dropdown {
     width: 100%;
   }
-  .mobile-menu-logo {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    width: 150px;
-  }
-
-  .mobile-menu-logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-   .international-menu > a {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+ .mobile-menu-logo {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 150px;
     }
 
-    .international-menu > a i {
-        color: #b00000 !important;
-        font-size: 14px;
-        margin-left: auto;
+    .mobile-menu-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
-    .menu-btn i {
+
+  .international-menu > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .international-menu > a i {
+    color: #b00000 !important;
+    font-size: 14px;
+    margin-left: auto;
+  }
+  .menu-btn i {
     transition: transform 0.3s ease;
-}
+  }
 
-.menu-btn.menu-open i {
+  .menu-btn.menu-open i {
     transform: rotate(90deg);
-}
+  }
 }

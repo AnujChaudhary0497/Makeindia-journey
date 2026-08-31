@@ -219,6 +219,10 @@ body {
 .book-btn:hover {
   background-color: #750000;
 }
+
+.mobile-menu-logo {
+    display: none;
+}
 /* ================= HERO ================= */
 
 .hero {
@@ -2369,18 +2373,6 @@ body {
   .international-dropdown {
     width: 100%;
   }
-  .mobile-menu-logo {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    width: 150px;
-  }
-
-  .mobile-menu-logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
 
    .international-menu > a {
         display: flex;
@@ -2396,6 +2388,20 @@ body {
     .menu-btn i {
     transition: transform 0.3s ease;
 }
+
+ .mobile-menu-logo {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 150px;
+    }
+
+    .mobile-menu-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
 .menu-btn.menu-open i {
     transform: rotate(90deg);

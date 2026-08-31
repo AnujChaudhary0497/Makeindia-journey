@@ -221,6 +221,10 @@ body {
   display: none;
 }
 
+.mobile-menu-logo {
+    display: none;
+}
+
 /*  ABOUT HERO  */
 
 .about-hero {
@@ -1202,18 +1206,19 @@ body {
   .international-dropdown {
     width: 100%;
   }
-  .mobile-menu-logo {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    width: 150px;
-  }
+ .mobile-menu-logo {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 150px;
+    }
 
-  .mobile-menu-logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+    .mobile-menu-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
   .international-menu > a {
     display: flex;
