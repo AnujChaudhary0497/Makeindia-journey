@@ -111,43 +111,36 @@ const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.querySelector(".nav-links");
 
 if (menuBtn && navLinks) {
+  const menuIcon = menuBtn.querySelector("i");
 
-    const menuIcon = menuBtn.querySelector("i");
+  menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("mobile-active");
 
-    menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("menu-open", isOpen);
 
-        const isOpen = navLinks.classList.toggle("mobile-active");
+    if (isOpen) {
+      menuIcon.classList.remove("fa-bars");
+      menuIcon.classList.add("fa-xmark");
+    } else {
+      menuIcon.classList.remove("fa-xmark");
+      menuIcon.classList.add("fa-bars");
+    }
+  });
 
-        menuBtn.classList.toggle("menu-open", isOpen);
+  // Outside click se menu close + icon wapas bars
+  document.addEventListener("click", (event) => {
+    if (
+      navLinks.classList.contains("mobile-active") &&
+      !navLinks.contains(event.target) &&
+      !menuBtn.contains(event.target)
+    ) {
+      navLinks.classList.remove("mobile-active");
+      menuBtn.classList.remove("menu-open");
 
-        if (isOpen) {
-            menuIcon.classList.remove("fa-bars");
-            menuIcon.classList.add("fa-xmark");
-        } else {
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
-        }
-
-    });
-
-    // Outside click se menu close + icon wapas bars
-    document.addEventListener("click", (event) => {
-
-        if (
-            navLinks.classList.contains("mobile-active") &&
-            !navLinks.contains(event.target) &&
-            !menuBtn.contains(event.target)
-        ) {
-
-            navLinks.classList.remove("mobile-active");
-            menuBtn.classList.remove("menu-open");
-
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
-        }
-
-    });
-
+      menuIcon.classList.remove("fa-xmark");
+      menuIcon.classList.add("fa-bars");
+    }
+  });
 }
 
 // ================= FAQ ACCORDION =================
@@ -169,3 +162,45 @@ faqItems.forEach((item) => {
     item.classList.toggle("active");
   });
 });
+
+// =========================
+// BOOKING MODAL
+// =========================
+
+const openBooking = document.getElementById("openBooking");
+const bookingModal = document.getElementById("bookingModal");
+const closeBooking = document.getElementById("closeBooking");
+
+if (openBooking && bookingModal && closeBooking) {
+  openBooking.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    bookingModal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+  });
+
+  closeBooking.addEventListener("click", () => {
+    bookingModal.classList.remove("active");
+
+    document.body.style.overflow = "";
+  });
+
+  // Outside click se close
+  bookingModal.addEventListener("click", (event) => {
+    if (event.target === bookingModal) {
+      bookingModal.classList.remove("active");
+
+      document.body.style.overflow = "";
+    }
+  });
+
+  // ESC se close
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && bookingModal.classList.contains("active")) {
+      bookingModal.classList.remove("active");
+
+      document.body.style.overflow = "";
+    }
+  });
+}

@@ -98,7 +98,7 @@
             packages. Explore breathtaking destinations
           </p>
 
-          <a href="#" class="hero-btn"> Book Now </a>
+          <a href="#" class="hero-book-btn" id="openBooking">Book Now</a>
         </div>
 
         <!-- Vertical Dots -->
@@ -125,25 +125,25 @@
         </div>
 
         <div class="destination-grid">
-          <div class="destination-card large">
+          <a href="shimla.html" class="destination-card large">
             <img src="assets/himacal.png" alt="Himachal Pradesh" />
-
             <h3>Himachal Pradesh</h3>
-          </div>
+          </a>
 
-          <div class="destination-card">
+          <a href="uttarakhand.html" class="destination-card">
             <img src="assets/uttrakhand.png" alt="Uttarakhand" />
             <h3>Uttarakhand</h3>
-          </div>
+          </a>
 
-          <div class="destination-card">
+          <a href="goa.html" class="destination-card">
             <img src="assets/goa.png" alt="Goa" />
             <h3>Goa</h3>
-          </div>
-          <div class="destination-card">
-            <img src="assets/rajasthan.png" alt="Destination" />
+          </a>
+
+          <a href="rajasthan.html" class="destination-card">
+            <img src="assets/rajasthan.png" alt="Rajasthan" />
             <h3>Rajasthan</h3>
-          </div>
+          </a>
         </div>
       </section>
       <section class="domestic-tours">
@@ -630,7 +630,7 @@
           <a href="blog.html">Blog</a>
           <a href="contact.html">Contact Us</a>
           <a href="faq.html">FAQ</a>
-          <a href="about.html">Tour Guide</a>
+          <a href="guide.html">Tour Guide</a>
         </div>
 
         <!-- Column 3 -->
@@ -639,9 +639,9 @@
 
           <a href="uttarakhand.html">Uttarakhand</a>
           <a href="rajasthan.html">Rajasthan</a>
-          <a href="#">Goa</a>
+          <a href="goa.html">Goa</a>
           <a href="#">Punjab</a>
-          <a href="#">Shimla</a>
+          <a href="shimla.html">Shimla</a>
           <a href="#">Manali</a>
         </div>
 
@@ -679,6 +679,180 @@
         </p>
       </div>
     </footer>
+    <!-- =========================
+     BOOKING MODAL
+========================= -->
+
+    <div class="booking-modal" id="bookingModal">
+      <div class="booking-box">
+        <button class="booking-close" id="closeBooking" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="booking-header">
+          <p>Start Your Journey</p>
+          <h2>Plan Your Perfect Trip</h2>
+          <span>
+            Tell us about your travel plans and our experts will help you create
+            the perfect journey.
+          </span>
+        </div>
+
+        <form class="booking-form">
+          <!-- ROW 1 -->
+
+          <div class="booking-row">
+            <div class="booking-field">
+              <label for="bookingName">Name</label>
+              <div class="input-box">
+                <i class="fa-regular fa-user"></i>
+                <input
+                  type="text"
+                  id="bookingName"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="booking-field">
+              <label for="bookingEmail">Email</label>
+              <div class="input-box">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  id="bookingEmail"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 2 -->
+
+          <div class="booking-row">
+            <div class="booking-field">
+              <label for="bookingPhone">Phone</label>
+              <div class="input-box">
+                <i class="fa-solid fa-phone"></i>
+                <input
+                  type="tel"
+                  id="bookingPhone"
+                  placeholder="Mobile Number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="booking-field">
+              <label for="bookingDate">Travel Date</label>
+              <div class="input-box">
+                <i class="fa-regular fa-calendar"></i>
+                <input type="date" id="bookingDate" required />
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 3 -->
+
+          <div class="booking-row">
+            <div class="booking-field">
+              <label for="persons">No. of Persons</label>
+
+              <div class="input-box select-box">
+                <i class="fa-solid fa-users"></i>
+
+                <select id="persons" required>
+                  <option value="" selected disabled>Select Persons</option>
+                  <option>1 Person</option>
+                  <option>2 Persons</option>
+                  <option>3 Persons</option>
+                  <option>4 Persons</option>
+                  <option>5 Persons</option>
+                  <option>6+ Persons</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="booking-field">
+              <label for="rooms">No. of Rooms</label>
+
+              <div class="input-box select-box">
+                <i class="fa-solid fa-bed"></i>
+
+                <select id="rooms" required>
+                  <option value="" selected disabled>Select Rooms</option>
+                  <option>1 Room</option>
+                  <option>2 Rooms</option>
+                  <option>3 Rooms</option>
+                  <option>4+ Rooms</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 4 -->
+
+          <div class="booking-row">
+            <div class="booking-field">
+              <label for="budget">Budget</label>
+
+              <div class="input-box select-box">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <select id="budget" required>
+                  <option value="" selected disabled>Select Budget</option>
+                  <option>Below ₹20,000</option>
+                  <option>₹20,000 - ₹50,000</option>
+                  <option>₹50,000 - ₹1,00,000</option>
+                  <option>₹1,00,000+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="booking-field">
+              <label for="destination">Destination</label>
+
+              <div class="input-box select-box">
+                <i class="fa-solid fa-location-dot"></i>
+
+                <select id="destination" required>
+                  <option value="" selected disabled>Select Destination</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>Goa</option>
+                  <option>Rajasthan</option>
+                  <option>Shimla</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- REMARKS -->
+
+          <div class="booking-field full-field">
+            <label for="remarks">Remarks</label>
+
+            <div class="textarea-box">
+              <i class="fa-regular fa-comment-dots"></i>
+
+              <textarea
+                id="remarks"
+                placeholder="Tell us about your travel requirements..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+
+          <button type="submit" class="booking-submit">
+            <span>BOOK NOW</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
