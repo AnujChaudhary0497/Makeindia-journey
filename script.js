@@ -162,44 +162,35 @@ faqItems.forEach((item) => {
     item.classList.toggle("active");
   });
 });
-
-// =========================
-// BOOKING MODAL
-// =========================
-
-const openBooking = document.getElementById("openBooking");
+const bookingButtons = document.querySelectorAll(".open-booking");
 const bookingModal = document.getElementById("bookingModal");
 const closeBooking = document.getElementById("closeBooking");
 
-if (openBooking && bookingModal && closeBooking) {
-  openBooking.addEventListener("click", (event) => {
-    event.preventDefault();
+if (bookingButtons.length && bookingModal && closeBooking) {
+  bookingButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
 
-    bookingModal.classList.add("active");
-
-    document.body.style.overflow = "hidden";
+      bookingModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
   });
 
   closeBooking.addEventListener("click", () => {
     bookingModal.classList.remove("active");
-
     document.body.style.overflow = "";
   });
 
-  // Outside click se close
   bookingModal.addEventListener("click", (event) => {
     if (event.target === bookingModal) {
       bookingModal.classList.remove("active");
-
       document.body.style.overflow = "";
     }
   });
 
-  // ESC se close
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && bookingModal.classList.contains("active")) {
       bookingModal.classList.remove("active");
-
       document.body.style.overflow = "";
     }
   });
