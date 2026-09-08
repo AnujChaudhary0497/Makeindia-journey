@@ -1151,7 +1151,7 @@ body {
   }
   /* MOBILE MENU */
   .navbar {
-    position: relative;
+    position: sticky;
     z-index: 1000;
   }
 

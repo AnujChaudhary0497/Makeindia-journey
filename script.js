@@ -195,3 +195,71 @@ if (bookingButtons.length && bookingModal && closeBooking) {
     }
   });
 }
+
+// -------contact us sending message----------
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(".send-message");
+    const originalText = submitButton.innerHTML;
+
+    submitButton.innerHTML = `
+      <span>SENDING...</span>
+      <i class="fa-solid fa-spinner fa-spin"></i>
+    `;
+
+    submitButton.disabled = true;
+
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      console.log("Contact form response:", result);
+
+      if (response.ok && result.success) {
+        alert("Message sent successfully! We will contact you soon.");
+
+        contactForm.reset();
+      } else {
+        alert(result.message || "Message could not be sent. Please try again.");
+      }
+    } catch (error) {
+      console.error("Contact form error:", error);
+
+      alert("Something went wrong. Please try again.");
+    } finally {
+      submitButton.innerHTML = originalText;
+      submitButton.disabled = false;
+    }
+  });
+}
+
+// ------------FOR POPUP------
+if (
+  window.location.pathname.endsWith("index.html") ||
+  window.location.pathname === "/" ||
+  window.location.pathname.endsWith("/")
+) {
+  setTimeout(() => {
+    const bookingModal = document.getElementById("bookingModal");
+
+    if (bookingModal) {
+      bookingModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }, 2000);
+}

@@ -52,7 +52,7 @@
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT US</a>
         <a href="domestic.html">DOMESTIC TOUR</a>
-       <div class="international-menu">
+        <div class="international-menu">
           <a href="#">
             INTERNATIONAL TOURS
             <i class="fa-solid fa-plus"></i>
@@ -136,9 +136,26 @@
           </div>
         </div>
 
-        <!-- ================= CONTACT FORM ================= -->
+        <!-- -------------- CONTACT FORM ------------ -->
+        <form
+          class="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input type="hidden" name="access_key" value="c3ed954e-f24d-453a-b2d4-69a40b5064bb" />
 
-        <div class="contact-form">
+          <input
+            type="hidden"
+            name="subject"
+            value="New Contact Message - Make India Journey"
+          />
+
+          <input
+            type="hidden"
+            name="from_name"
+            value="Make India Journey Website"
+          />
+
           <h2>Feel free to contact with us</h2>
 
           <p class="form-description">
@@ -150,22 +167,39 @@
             <div class="form-group">
               <label for="name">Name</label>
 
-              <input type="text" id="name" placeholder="Your name" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
             </div>
 
             <div class="form-group">
               <label for="email">Email</label>
 
-              <input type="email" id="email" placeholder="Your Email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
             </div>
           </div>
 
           <div class="form-group message-group">
-            <textarea id="message" placeholder="Your message"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message"
+              required
+            ></textarea>
           </div>
 
           <button type="submit" class="send-message">Send Message</button>
-        </div>
+        </form>
       </section>
       <!-- --------- MAP SECTion ------------- -->
 
@@ -179,7 +213,7 @@
         </iframe>
       </section>
     </main>
-    <!-- ================= FOOTER ================= -->
+    <!-- ------------ FOOTER -------------- -->
 
     <footer class="footer">
       <div class="footer-container">
@@ -194,15 +228,15 @@
           </p>
 
           <div class="footer-social">
-            <a href="#">
+            <a href="https://www.instagram.com/anujchaudhary_0497/">
               <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a href="#">
+            <a href="https://www.facebook.com/share/1DYJJySt4T/">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/in/anuj-chaudhary-411792271jj">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
           </div>

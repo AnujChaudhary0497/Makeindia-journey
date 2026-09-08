@@ -701,7 +701,7 @@ body {
   margin: 0;
 }
 
-/* ================= COPYRIGHT ================= */
+/* ------------ COPYRIGHT ----------*/
 
 .copyright {
   background-color: #a90000;
@@ -1210,7 +1210,7 @@ body {
   }
   /* MOBILE MENU */
   .navbar {
-    position: relative;
+    position: sticky;
     z-index: 1000;
   }
 

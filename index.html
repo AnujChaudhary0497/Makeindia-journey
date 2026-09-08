@@ -98,7 +98,9 @@
             packages. Explore breathtaking destinations
           </p>
 
-          <a href="#" class="hero-book-btn open-booking" id="openBooking">Book Now</a>
+          <a href="#" class="hero-book-btn open-booking" id="openBooking"
+            >Book Now</a
+          >
         </div>
 
         <!-- Vertical Dots -->
@@ -388,9 +390,7 @@
               <h2>What Our Customers Say</h2>
 
               <p>
-                Duis rutrum nisl urna. Maecenas vel libero faucibus nisi
-                venenatis hendrerit a id lectus. Suspendisse blandit interdum.
-                Sed pellentesque at nunc eget consectetur.
+                Our customers love the seamless travel experiences, personalized service, and unforgettable journeys we create. From planning to exploring, we're proud to make every trip special and memorable.
               </p>
             </div>
 
@@ -525,7 +525,7 @@
 
               <span class="blog-date">
                 <i class="fa-regular fa-calendar-days"></i>
-                July 15, 2022
+                July 15, 2026
               </span>
             </div>
 
@@ -549,7 +549,7 @@
 
               <span class="blog-date">
                 <i class="fa-regular fa-calendar-days"></i>
-                July 15, 2022
+                July 19, 2026
               </span>
             </div>
 
@@ -573,14 +573,14 @@
 
               <span class="blog-date">
                 <i class="fa-regular fa-calendar-days"></i>
-                July 15, 2022
+                August 18, 2026
               </span>
             </div>
 
             <div class="blog-info">
               <span>
                 <i class="fa-solid fa-user"></i>
-                By krishna
+                By Anuj
               </span>
 
               <span>
@@ -608,15 +608,15 @@
           </p>
 
           <div class="footer-social">
-            <a href="#">
+            <a href="https://www.instagram.com/anujchaudhary_0497/">
               <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a href="#">
+            <a href="https://www.facebook.com/share/1DYJJySt4T/">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/in/anuj-chaudhary-411792271">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
           </div>
@@ -653,8 +653,8 @@
             <i class="fa-solid fa-phone"></i>
 
             <p>
-              +91-9999080086<br />
-              +91-9582127777
+              +91-7906090574<br />
+              +91-7906359262
             </p>
           </div>
 
@@ -680,7 +680,7 @@
       </div>
     </footer>
 
-<!-- --------------Booking Model------------- -->
+    <!-- --------------Booking Model------------- -->
 
     <div class="booking-modal" id="bookingModal">
       <div class="booking-box">
@@ -697,7 +697,13 @@
           </span>
         </div>
 
-        <form class="booking-form">
+        <form
+          class="booking-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input type="hidden" name="access_key" value="c3ed954e-f24d-453a-b2d4-69a40b5064bb" />
+          <input type="hidden" name="from_name" value="Make India Journey" />
           <!-- ROW 1 -->
 
           <div class="booking-row">
@@ -708,6 +714,7 @@
                 <input
                   type="text"
                   id="bookingName"
+                  name="name"
                   placeholder="Enter your name"
                   required
                 />
@@ -721,6 +728,7 @@
                 <input
                   type="email"
                   id="bookingEmail"
+                  name="email"
                   placeholder="Email"
                   required
                 />
@@ -738,6 +746,7 @@
                 <input
                   type="tel"
                   id="bookingPhone"
+                  name="phone"
                   placeholder="Mobile Number"
                   required
                 />
@@ -748,7 +757,12 @@
               <label for="bookingDate">Travel Date</label>
               <div class="input-box">
                 <i class="fa-regular fa-calendar"></i>
-                <input type="date" id="bookingDate" required />
+                <input
+                  type="date"
+                  id="bookingDate"
+                  name="travel_date"
+                  required
+                />
               </div>
             </div>
           </div>
@@ -762,7 +776,7 @@
               <div class="input-box select-box">
                 <i class="fa-solid fa-users"></i>
 
-                <select id="persons" required>
+                <select id="persons" name="persons" required>
                   <option value="" selected disabled>Select Persons</option>
                   <option>1 Person</option>
                   <option>2 Persons</option>
@@ -780,7 +794,7 @@
               <div class="input-box select-box">
                 <i class="fa-solid fa-bed"></i>
 
-                <select id="rooms" required>
+                <select id="rooms" name="rooms" required>
                   <option value="" selected disabled>Select Rooms</option>
                   <option>1 Room</option>
                   <option>2 Rooms</option>
@@ -800,7 +814,7 @@
               <div class="input-box select-box">
                 <i class="fa-solid fa-indian-rupee-sign"></i>
 
-                <select id="budget" required>
+                <select id="budget" name="budget" required>
                   <option value="" selected disabled>Select Budget</option>
                   <option>Below ₹20,000</option>
                   <option>₹20,000 - ₹50,000</option>
@@ -816,7 +830,7 @@
               <div class="input-box select-box">
                 <i class="fa-solid fa-location-dot"></i>
 
-                <select id="destination" required>
+                <select id="destination" name="destination" required>
                   <option value="" selected disabled>Select Destination</option>
                   <option>Himachal Pradesh</option>
                   <option>Uttarakhand</option>
@@ -838,6 +852,7 @@
 
               <textarea
                 id="remarks"
+                name="remarks"
                 placeholder="Tell us about your travel requirements..."
               ></textarea>
             </div>
@@ -853,5 +868,16 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+// ------For popup over homePage------      
+  setTimeout(() => {
+    const bookingModal = document.getElementById("bookingModal");
+
+    if (bookingModal) {
+      bookingModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }, 2000);
+</script>
   </body>
 </html>
