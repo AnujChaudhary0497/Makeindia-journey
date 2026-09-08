@@ -143,7 +143,7 @@ if (menuBtn && navLinks) {
   });
 }
 
-// ================= FAQ ACCORDION =================
+// ================= FAQ ACCORDION ================= //
 
 const faqItems = document.querySelectorAll(".faq-item");
 
@@ -231,7 +231,7 @@ if (contactForm) {
       console.log("Contact form response:", result);
 
       if (response.ok && result.success) {
-        alert("Message sent successfully! We will contact you soon.");
+        alert("Message sent successfully! We will connect you soon.");
 
         contactForm.reset();
       } else {
@@ -248,7 +248,7 @@ if (contactForm) {
   });
 }
 
-// ------------FOR POPUP------
+// ------------FOR POPUP------------
 if (
   window.location.pathname.endsWith("index.html") ||
   window.location.pathname === "/" ||
