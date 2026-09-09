@@ -721,6 +721,7 @@ body {
 
   max-height: 92vh;
   overflow-y: auto;
+  scrollbar-width: none;
 
   background: #fff;
 
@@ -731,7 +732,6 @@ body {
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
 
   transform: translateY(30px) scale(0.97);
-  overflow: hidden;
   transition: transform 0.35s ease;
 }
 

@@ -706,7 +706,9 @@ body {
   max-width: 600px;
 
   max-height: 92vh;
-  overflow-y: hidden;
+
+  overflow-y: auto;
+  scrollbar-width: none;
 
   background: #fff;
 
