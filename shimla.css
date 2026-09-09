@@ -703,10 +703,10 @@ body {
   position: relative;
 
   width: 100%;
-  max-width: 950px;
+  max-width: 600px;
 
   max-height: 92vh;
-  overflow-y: auto;
+  overflow-y: hidden;
 
   background: #fff;
 
@@ -735,8 +735,8 @@ body {
   top: 18px;
   right: 18px;
 
-  width: 46px;
-  height: 46px;
+  width: 30px;
+  height: 30px;
 
   border: none;
   border-radius: 50%;
@@ -809,11 +809,11 @@ body {
 .booking-row {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 25px;
+  gap: 10px;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .booking-field {
@@ -825,7 +825,7 @@ body {
 
   color: #555;
 
-  font-size: 14px;
+  font-size: 10px;
 
   font-weight: 600;
 
@@ -838,7 +838,7 @@ body {
 
 .input-box {
   width: 100%;
-  height: 52px;
+  height: 45px;
 
   display: flex;
   align-items: center;
@@ -863,7 +863,7 @@ body {
 .input-box > i {
   color: #a90000;
 
-  font-size: 14px;
+  font-size: 12px;
 
   margin-left: 15px;
 
@@ -900,7 +900,8 @@ body {
 
 .input-box select {
   cursor: pointer;
-
+  min-width: 0;
+  max-width: 100%;
   appearance: auto;
 }
 
@@ -921,7 +922,7 @@ body {
 .textarea-box {
   width: 100%;
 
-  min-height: 120px;
+  min-height: 75px;
 
   display: flex;
   align-items: flex-start;
@@ -981,9 +982,9 @@ body {
 .booking-submit {
   width: 100%;
 
-  height: 55px;
+  height: 45px;
 
-  margin-top: 25px;
+  margin-top: 12px;
 
   border: none;
 
@@ -1384,7 +1385,6 @@ body {
 
   .booking-box {
     max-height: 94vh;
-
     padding: 55px 20px 25px;
 
     border-radius: 14px;
@@ -1631,3 +1631,70 @@ body {
     gap: 18px;
   }
 }
+/* ===== BOOKING POPUP COMPACT ===== */
+
+.booking-box {
+  box-sizing: border-box;
+  padding: 28px 30px 25px;
+}
+
+/* Header */
+.booking-header p {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.booking-header h2 {
+  font-size: 23px;
+  margin-bottom: 4px;
+}
+
+.booking-header span {
+  font-size: 10px;
+}
+
+/* Rows */
+.booking-row {
+  gap: 10px;
+  margin-bottom: 7px;
+}
+
+/* Labels */
+.booking-field label {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* Input / Select */
+.input-box {
+  height: 40px;
+}
+
+.input-box input,
+.input-box select {
+  font-size: 11px;
+}
+
+.input-box i {
+  font-size: 12px;
+}
+
+/* Remarks */
+.full-field {
+  margin-top: 2px;
+}
+
+.textarea-box textarea {
+  height: 48px;
+  min-height: 48px;
+  font-size: 12px;
+}
+
+/* Book Now */
+.booking-submit {
+  padding: 10px 22px;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+

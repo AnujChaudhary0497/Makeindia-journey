@@ -415,7 +415,7 @@
           <h2>Plan Your Perfect Trip</h2>
           <span>
             Tell us about your travel plans and our experts will help you create
-            the perfect journey
+            the perfect journey.
           </span>
         </div>
 
@@ -424,11 +424,15 @@
           action="https://api.web3forms.com/submit"
           method="POST"
         >
-          <input type="hidden" name="access_key" value="c3ed954e-f24d-453a-b2d4-69a40b5064bb" />
+          <input
+            type="hidden"
+            name="access_key"
+            value="c3ed954e-f24d-453a-b2d4-69a40b5064bb"
+          />
           <input type="hidden" name="from_name" value="Make India Journey" />
           <!-- ROW 1 -->
-
           <div class="booking-row">
+            <!-- Name -->
             <div class="booking-field">
               <label for="bookingName">Name</label>
               <div class="input-box">
@@ -443,6 +447,7 @@
               </div>
             </div>
 
+            <!-- Email -->
             <div class="booking-field">
               <label for="bookingEmail">Email</label>
               <div class="input-box">
@@ -456,11 +461,8 @@
                 />
               </div>
             </div>
-          </div>
 
-          <!-- ROW 2 -->
-
-          <div class="booking-row">
+            <!-- Phone -->
             <div class="booking-field">
               <label for="bookingPhone">Phone</label>
               <div class="input-box">
@@ -474,7 +476,11 @@
                 />
               </div>
             </div>
+          </div>
 
+          <!-- ROW 2 -->
+          <div class="booking-row">
+            <!-- Travel Date -->
             <div class="booking-field">
               <label for="bookingDate">Travel Date</label>
               <div class="input-box">
@@ -487,17 +493,12 @@
                 />
               </div>
             </div>
-          </div>
 
-          <!-- ROW 3 -->
-
-          <div class="booking-row">
+            <!-- Persons -->
             <div class="booking-field">
               <label for="persons">No. of Persons</label>
-
               <div class="input-box select-box">
                 <i class="fa-solid fa-users"></i>
-
                 <select id="persons" name="persons" required>
                   <option value="" selected disabled>Select Persons</option>
                   <option>1 Person</option>
@@ -510,12 +511,11 @@
               </div>
             </div>
 
+            <!-- Rooms -->
             <div class="booking-field">
               <label for="rooms">No. of Rooms</label>
-
               <div class="input-box select-box">
                 <i class="fa-solid fa-bed"></i>
-
                 <select id="rooms" name="rooms" required>
                   <option value="" selected disabled>Select Rooms</option>
                   <option>1 Room</option>
@@ -527,15 +527,13 @@
             </div>
           </div>
 
-          <!-- ROW 4 -->
-
+          <!-- ROW 3 -->
           <div class="booking-row">
+            <!-- Budget -->
             <div class="booking-field">
               <label for="budget">Budget</label>
-
               <div class="input-box select-box">
                 <i class="fa-solid fa-indian-rupee-sign"></i>
-
                 <select id="budget" name="budget" required>
                   <option value="" selected disabled>Select Budget</option>
                   <option>Below ₹20,000</option>
@@ -546,12 +544,11 @@
               </div>
             </div>
 
+            <!-- Destination -->
             <div class="booking-field">
               <label for="destination">Destination</label>
-
               <div class="input-box select-box">
                 <i class="fa-solid fa-location-dot"></i>
-
                 <select id="destination" name="destination" required>
                   <option value="" selected disabled>Select Destination</option>
                   <option>Himachal Pradesh</option>
@@ -565,7 +562,6 @@
           </div>
 
           <!-- REMARKS -->
-
           <div class="booking-field full-field">
             <label for="remarks">Remarks</label>
 
