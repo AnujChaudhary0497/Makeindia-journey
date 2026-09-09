@@ -2987,7 +2987,6 @@ body {
 .booking-box {
   box-sizing: border-box;
   padding: 28px 30px 25px;
-  overflow: hidden;
 }
 
 /* Header */
