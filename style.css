@@ -1459,7 +1459,7 @@ body {
   max-height: 92vh;
   overflow-y: auto;
   overflow-x: hidden;
-  overflow: hidden;
+  scrollbar-width: none;
   box-sizing: border-box;
   background: #fff;
 }
@@ -2982,7 +2982,7 @@ body {
   transform: rotate(90deg);
 }
 
-/* --------- BOOKING POPUP COMPACT ---------- */
+/* ===== BOOKING POPUP COMPACT ===== */
 
 .booking-box {
   box-sizing: border-box;
