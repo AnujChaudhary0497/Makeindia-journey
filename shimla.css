@@ -722,7 +722,9 @@ body {
 
   transition: transform 0.35s ease;
 }
-
+.booking-box::-webkit-scrollbar {
+  display: none;
+}
 .booking-modal.active .booking-box {
   transform: translateY(0) scale(1);
 }
