@@ -261,5 +261,5 @@ if (
       bookingModal.classList.add("active");
       document.body.style.overflow = "hidden";
     }
-  }, 2000);
+  }, 3000);
 }
