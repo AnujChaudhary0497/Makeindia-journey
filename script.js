@@ -95,6 +95,19 @@ function changeHero(index) {
 
   heroContent.classList.add("hero-animate");
 }
+// ================= AUTO HERO SLIDE =================
+
+let currentHeroSlide = 0;
+
+setInterval(() => {
+  currentHeroSlide++;
+
+  if (currentHeroSlide >= heroSlides.length) {
+    currentHeroSlide = 0;
+  }
+
+  changeHero(currentHeroSlide);
+}, 5000);
 
 /* ================= DOT CLICK ================= */
 
@@ -261,5 +274,5 @@ if (
       bookingModal.classList.add("active");
       document.body.style.overflow = "hidden";
     }
-  }, 3000);
+  }, 2000);
 }
